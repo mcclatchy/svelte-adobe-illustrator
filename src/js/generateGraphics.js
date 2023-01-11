@@ -83,7 +83,7 @@ const createGraphic = async (graphic, i) => {
     const googleBucketYear = graphic?.google_bucket_year
     const googleBucketFolder = graphic?.google_bucket_folder
     const googleBucketOutputPath = `${googleBucketYear}/${googleBucketFolder}/${graphicFilename}`
-    const sdsClass = graphic?.sds_class;
+    const embedInfographicClass = graphic?.embed_infographic_class;
 
     console.log(`
 #################################################################################
@@ -138,7 +138,7 @@ const createGraphic = async (graphic, i) => {
 
 
     // Write to main.js to plug into the npm run build workflow for the specific graphic
-    const mainEmbedClass = sdsClass ? `embed.parentElement.classList.add("${sdsClass}")` : ""
+    const mainEmbedClass = embedInfographicClass ? `embed${i}.parentElement.classList.add("${embedInfographicClass}")` : ""
     const mainTemplate = `
         import App${i} from './components/AppGraphic${i}.svelte';
 
@@ -264,7 +264,14 @@ ${embedTemplate}
   await fs.writeFileSync('./src/js/main.js', previewMainTemplate);
 
   partials.push(partialsEmbedTemplate)
-  const previewPartialsTemplate = partials.join(spacerTemplate)
+  const embedInfographics = partials.map((p) => {
+    return `
+    <div class="embed-infographic">
+      ${p}
+    </div>
+`
+  });
+  const previewPartialsTemplate = embedInfographics.join(spacerTemplate)
   await fs.writeFileSync(`./partials/embed.html`, previewPartialsTemplate);
 
 }

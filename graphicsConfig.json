@@ -15,7 +15,12 @@
             "graphic_notes": "Source: N.C. Department of Agriculture and Consumer Services",
             "google_bucket_year": "2023",
             "google_bucket_folder": "ai2svelte-examples"
+        },
+        {
+            "graphic_filename": "long_graphic_scroller_timeline2",
+            "google_bucket_year": "2023",
+            "google_bucket_folder": "ai2svelte-examples",
+            "embed_infographic_class": "full-bleed"
         }
-
     ]
 }
