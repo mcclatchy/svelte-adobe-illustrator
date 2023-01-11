@@ -1,5 +1,9 @@
 <svelte:head>
-  <style>
+  <!-- 
+    If you need to incorporate specific fonts out of the normal defaults, this is a way to do so 
+    and you can see some examples below
+  -->
+  <!-- <style>
     @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark:Bold&display=swap');
 
@@ -13,5 +17,5 @@
     @import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:SemiBold&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:Bold&display=swap');
-  </style>
+  </style> -->
 </svelte:head>
