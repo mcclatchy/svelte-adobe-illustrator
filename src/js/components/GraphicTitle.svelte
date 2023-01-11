@@ -9,6 +9,6 @@
 <style type="text/css">
 	.g-title {
 		font-size: var(--hs,1.5rem);
-  	margin: 0 auto;
+  	margin: 0;
 	}
 </style>

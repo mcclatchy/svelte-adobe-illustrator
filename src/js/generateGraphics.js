@@ -209,6 +209,20 @@ const createGraphic = async (graphic, i) => {
 `
 )
     await asyncSpawn(`gsutil -m rsync -r -x ".DS_Store|partials/" src/google-bucket-output/${googleBucketOutputPath}/ gs://mc-high-impact/${googleBucketOutputPath}`);
+  
+
+    console.log(`
+  }
+---------------------------------------------------------------------------------
+    Step 3:  Copy/paste this HTML code into CUE
+
+${embedTemplate}
+
+---------------------------------------------------------------------------------
+
+`
+)
+
   }
 
 
