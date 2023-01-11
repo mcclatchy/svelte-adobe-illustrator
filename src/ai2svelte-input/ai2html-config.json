@@ -1,0 +1,23 @@
+{
+	"image_source_path": "",
+	"fonts": [
+		{
+			"aifont": "NotoSans-Bold",
+			"family": "Noto Sans",
+			"weight": "700",
+			"style": ""
+		},
+		{
+			"aifont": "NotoSans-SemiBold",
+			"family": "Noto Sans",
+			"weight": "600",
+			"style": ""
+		},
+		{
+			"aifont": "NotoSans-Regular",
+			"family": "Noto Sans",
+			"weight": "400",
+			"style": ""
+		}
+	]
+}

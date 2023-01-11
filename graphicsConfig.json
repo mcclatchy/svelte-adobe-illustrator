@@ -1,0 +1,21 @@
+{
+    "graphics": [
+        {
+            "graphic_filename": "three_counties_ai2html2",
+            "graphic_title": "Big poultry growth spurts",
+            "graphic_description": "Three counties with significant growth in the number of poultry raised include Robeson, Anson and Duplin.",
+            "graphic_notes": "Source: N.C. Department of Agriculture and Consumer Services",
+            "google_bucket_year": "2023",
+            "google_bucket_folder": "ai2svelte-examples"
+        },
+        {
+            "graphic_filename": "poultry_statewide_viz_ai2html4",
+            "graphic_title": "North Carolina’s poultry crop: more than 1 billion birds",
+            "graphic_description": "Statewide, chicken and turkey production has grown 66% since 1991. It jumped more than 17% since 2016.",
+            "graphic_notes": "Source: N.C. Department of Agriculture and Consumer Services",
+            "google_bucket_year": "2023",
+            "google_bucket_folder": "ai2svelte-examples"
+        }
+
+    ]
+}

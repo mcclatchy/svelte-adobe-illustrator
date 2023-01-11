@@ -1,0 +1,36 @@
+{
+  "name": "svelte-ai",
+  "version": "3.1.1",
+  "license": "MIT",
+  "config": {
+    "cueID": "",
+    "projectName": "svelte-ai",
+    "docID": "",
+    "sheetID": ""
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build --base /$npm_package_config_remote${PWD##*/}/",
+    "get:doc": "node ./utils/get-data.js $npm_package_config_docID doc",
+    "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
+    "deploy:static": "make PROJ_NAME=${PWD##*/} deploy"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "axios": "^0.21.4",
+    "dotenv": "^7.0.0",
+    "eslint": "^7.32.0",
+    "fs-extra": "^10.1.0",
+    "marked": "^4.0.8",
+    "node-sass": "^8.0.0",
+    "postcss-nesting": "^10.0.2",
+    "sass": "^1.57.1",
+    "svelte": "^3.44.2",
+    "svelte-preprocess": "^4.9.8",
+    "vite": "^2.6.14",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "await-exec": "^0.1.2"
+  }
+}
