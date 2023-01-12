@@ -6,26 +6,26 @@
           import GraphicNotes from './GraphicNotes.svelte';
           import GraphicTitle from './GraphicTitle.svelte';
           
-        import Graphic0 from '../../ai2svelte-output/three_counties_ai2html2.svelte';
+        import Graphic0 from '../../ai2svelte-output/poultry-three-counties.svelte';
     
 
-        import Graphic1 from '../../ai2svelte-output/poultry_statewide_viz_ai2html4.svelte';
+        import Graphic1 from '../../ai2svelte-output/poultry-statewide.svelte';
     
 
-        import Graphic2 from '../../ai2svelte-output/long_graphic_scroller_timeline2.svelte';
+        import Graphic2 from '../../ai2svelte-output/tweet-timeline.svelte';
     
 
           const domain = window.pageInfo['marketInfo.domain'];
           
-        const baseUrl0 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/three_counties_ai2html2`
+        const baseUrl0 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/poultry-three-counties`
         const imagePath0 = import.meta.env.PROD ? `${baseUrl0}` : '../../src/ai2svelte-output/imgs'
     
 
-        const baseUrl1 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/poultry_statewide_viz_ai2html4`
+        const baseUrl1 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/poultry-statewide`
         const imagePath1 = import.meta.env.PROD ? `${baseUrl1}` : '../../src/ai2svelte-output/imgs'
     
 
-        const baseUrl2 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/long_graphic_scroller_timeline2`
+        const baseUrl2 = `https://www.${domain}.com/static/hi/2023/ai2svelte-examples/tweet-timeline`
         const imagePath2 = import.meta.env.PROD ? `${baseUrl2}` : '../../src/ai2svelte-output/imgs'
     
 

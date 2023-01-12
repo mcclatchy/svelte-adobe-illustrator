@@ -18,6 +18,12 @@
 			"family": "Noto Sans",
 			"weight": "400",
 			"style": ""
+		},
+		{
+			"aifont": "NotoSans-Italic",
+			"family": "Noto Sans",
+			"weight": "",
+			"style": "italic"
 		}
 	]
 }
