@@ -2,7 +2,7 @@
 	export let text;
 </script>
 
-<p class="g-notes g-text">
+<p class="g-notes g-text caption">
 	{@html text}
 </p>
 
