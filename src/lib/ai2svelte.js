@@ -4133,7 +4133,8 @@ function generateOutputHtml(content, pageName, settings) {
   }
 
   // HTML
-  html = '<div id="' + containerId + '" class="' + '" bind:clientWidth={width}>\r';
+  html = '<svelte:window bind:innerWidth={width}/>\r'
+  html += '<div id="' + containerId + '" class="' + '">\r';
   if (linkSrc) {
     // optional link around content
     html += '\t<a class="' + nameSpace + 'ai2htmlLink" href="' + linkSrc + '">\r';
