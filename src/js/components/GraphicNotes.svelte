@@ -9,5 +9,6 @@
 <style type="text/css">
 	.g-notes {
     font: 0.875rem var(--sans);
+    color: var(--gray) !important;
 	}
 </style>
