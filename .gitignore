@@ -10,6 +10,7 @@
 *.svg
 *.glb
 *.ipynb_checkpoints*
+*src/js/components/App.svelte
 *src/js/components/AppGraphic*
 *partials/embed.html
 *src/js/main.js
