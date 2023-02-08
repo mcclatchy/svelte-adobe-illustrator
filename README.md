@@ -4,7 +4,7 @@ This repo aims to automate and standardize as much of the process of getting gra
 ## One-Time Setup Steps
 
 ### 1. Install `gsutils`
-If not already installed locally, you'll need to install `[gsutils](https://cloud.google.com/storage/docs/gsutil_install)` and get permissions to the `mc-high-impact` folder.
+If not already installed locally, you'll need to install [gsutils](https://cloud.google.com/storage/docs/gsutil_install) and get permissions to the `mc-high-impact` folder.
 
 ### 2. Clone repo and install dependencies
 ```
