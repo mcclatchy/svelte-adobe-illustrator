@@ -13,7 +13,7 @@ npm install
 ```
 
 ### 3. Add ai2svelte script to Adobe Illustrator
-The `ai2svelte.js` script needs to be added to the appropriate local folder of Adobe Illustrator scripts. The process is the same as installing `ai2html`. I added a copy of the `ai2svelte.js` file in this repository (forked and adapted from NYT's `[ai2html](https://github.com/newsdev/ai2html)` and Reuter's `[ai2svelte](https://github.com/reuters-graphics/ai2svelte)`.
+The `ai2svelte.js` script needs to be added to the appropriate local folder of Adobe Illustrator scripts. The process is the same as installing `ai2html`. I added a copy of the `ai2svelte.js` file in this repository (forked and adapted from NYT's [ai2html](https://github.com/newsdev/ai2html) and Reuter's [ai2svelte](https://github.com/reuters-graphics/ai2svelte).
 
 Below is a command you can use on a Mac to copy the file into the right directory - due to permissions of the Adobe Illustrator file, you may need to use `sudo`. Your local filepath to the Adobe Illustrator folder may be different than this one, and you can also manually drag and drop the file in Finder if you prefer.
 ```
@@ -32,7 +32,7 @@ In Adobe Illustrator, click File -> Open then in the modal, set the Enable dropd
 
 
 ### 1. Create your Adobe Illustrator `.ai` file in `src/ai2html-input` folder
-You can open up Adobe Illustrator and create a new file, and save it into the src/ai2svelte-input folder within your local copy of `svelte-adobe-illustrator`. To keep this repo light, the `.gitignore` is set to ignore `.ai` files so they don't bog down the commmit history.
+You can open up Adobe Illustrator and create a new file, and save it into the `src/ai2svelte-input` folder within your local copy of `svelte-adobe-illustrator`. To keep this repo light, the `.gitignore` is set to ignore `.ai` files so they don't bog down the commmit history.
 
 If you want to test a quick set up, download the `.ai` files in this [Google folder](https://drive.google.com/drive/u/0/folders/1oCWsZ3kJ_VvmzruAA_5milcDgAFG6Aqv), and place them directly into the local `src/ai2html-input` folder.
 
