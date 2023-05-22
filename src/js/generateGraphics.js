@@ -138,7 +138,7 @@ const createGraphic = async (graphic, i) => {
 
 
     // Write to main.js to plug into the npm run build workflow for the specific graphic
-    const mainEmbedClass = embedInfographicClass ? `embed${i}.parentElement.classList.add("${embedInfographicClass}")` : ""
+    const mainEmbedClass = embedInfographicClass ? `embed${i}.closest(".embed-infographic")?.classList.add("${embedInfographicClass}")` : ""
     const mainTemplate = `
         import App${i} from './components/AppGraphic${i}.svelte';
 
