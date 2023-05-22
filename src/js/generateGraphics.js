@@ -143,7 +143,7 @@ const createGraphic = async (graphic, i) => {
         import App${i} from './components/AppGraphic${i}.svelte';
 
         window.$${i} = document.querySelector.bind(document);
-        const embed${i} = $${i}('#embedRoot-${i}');
+        const embed${i} = $${i}('#embedRoot-${graphicFilename}');
         ${mainEmbedClass}
 
         const app${i} = new App${i}({
@@ -153,7 +153,7 @@ const createGraphic = async (graphic, i) => {
     await fs.writeFileSync("./src/js/main.js", mainTemplate);
 
     const partialsEmbedTemplate = `
-      <div id="embedRoot-${i}" class="embedRoot"></div>
+      <div id="embedRoot-${graphicFilename}" class="embedRoot"></div>
       <script type="module" src="{{resolve-from-root '/src/js/main.js'}}"></script>
     `
     await fs.writeFileSync("./partials/embed.html", partialsEmbedTemplate);
@@ -194,7 +194,7 @@ const createGraphic = async (graphic, i) => {
     const embedTemplate = 
 `<script type="module" crossorigin src="/static/hi/${googleBucketOutputPath}/embed.js"></script>
 <link rel="stylesheet" href="/static/hi/${googleBucketOutputPath}/embed.css">
-<div id="embedRoot-${i}" class="embedRoot"></div>`
+<div id="embedRoot-${graphicFilename}" class="embedRoot"></div>`
 
     await fs.writeFileSync(`${destinationDirectory}/embed.html`, embedTemplate);
 
