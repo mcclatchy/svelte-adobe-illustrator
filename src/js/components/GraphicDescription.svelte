@@ -8,7 +8,7 @@
 
 <style type="text/css">
 	.g-description {
-		font: 0.875rem var(--sans);
+		font: 0.9375rem var(--sans);
 		margin: 0.75em 0;
 	}
 </style>
