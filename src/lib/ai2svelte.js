@@ -59,6 +59,7 @@ var defaultSettings = {
   "image_format": ["auto"],  // Options: auto, png, png24, jpg, svg
   "write_image_files": true,
   "responsiveness": "fixed", // Options: fixed, dynamic
+  "object_fit": "", // Options: contain
   "max_width": "",
   "output": "one-file",      // Options: one-file, multiple-files
   "project_name": "",        // Defaults to the name of the AI file
@@ -1771,6 +1772,12 @@ function getAllArtboardBounds() {
 function getArtboardWidth(ab) {
   var abSettings = getArtboardSettings(ab);
   return abSettings.width || convertAiBounds(ab.artboardRect).width;
+}
+
+// return the effective height of an artboard (the actual height, overridden by optional setting)
+function getArtboardHeight(ab) {
+  var abSettings = getArtboardSettings(ab);
+  return abSettings.height || convertAiBounds(ab.artboardRect).height;
 }
 
 // get range of container widths that an ab is visible
@@ -3971,12 +3978,33 @@ function generateArtboardDiv(ab, settings) {
 
 function generateArtboardCss(ab, textClasses, settings) {
   var t3 = '\t',
-      t4 = t3 + '\t',
-      abId = '#' + nameSpace + getArtboardFullName(ab, settings),
-      css = '';
+    t4 = t3 + '\t',
+    abId = '#' + nameSpace + getArtboardFullName(ab, settings),
+    css = '';
   css += t3 + abId + ' {\r';
-  css += t4 + 'position:relative;\r';
-  css += t4 + 'overflow:hidden;\r';
+  
+  var abWidth = getArtboardWidth(ab);
+  var abHeight = getArtboardHeight(ab);
+  var aspectRatio = Math.round(abWidth / abHeight * 100) / 100;
+  if (settings.object_fit === "contain") {
+    var containCss = ''
+    containCss += t4 + "width: 100vw;\r";
+    containCss += t4 + "height: " + Math.round(1 / aspectRatio * 100 * 100) / 100 + "vw;\r";
+    containCss += t4 + "max-height: 100vh;\r";
+    containCss += t4 + "max-width: " + Math.round(aspectRatio * 100 * 100) / 100 + "vh;\r";
+    containCss += t4 + "margin: auto;\r";
+    containCss += t4 + "position: absolute;\r";
+    containCss += t4 + "top: 0;\r";
+    containCss += t4 + "bottom: 0;\r";
+    containCss += t4 + "left: 0;\r";
+    containCss += t4 + "right: 0;\r";
+    css += containCss;
+  } else {
+    var coverCss = '';
+    coverCss += t4 + "position: relative";
+    coverCss += t4 + "overflow: hidden";
+    css += coverCss;
+  }
   css += t3 + '}\r';
 
   // classes for paragraph and character styles
@@ -4145,10 +4173,13 @@ function generateOutputHtml(content, pageName, settings) {
   }
   html += '\r</div>\r';
 
+  const embedCss = ".embed-root { width: 100%; height: 100%; }";
+
   // CSS
   css = '<style media="screen,print">\r' +
     generatePageCss(containerId, settings) +
     content.css +
+    embedCss +
     '\r</style>\r';
 
   // JS
