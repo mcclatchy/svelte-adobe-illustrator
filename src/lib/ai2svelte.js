@@ -3994,10 +3994,11 @@ function generateArtboardCss(ab, textClasses, settings) {
     containCss += t4 + "max-width: " + Math.round(aspectRatio * 100 * 100) / 100 + "vh;\r";
     containCss += t4 + "margin: auto;\r";
     containCss += t4 + "position: absolute;\r";
-    containCss += t4 + "top: 0;\r";
+    containCss += t4 + "top: 50%;\r";
     containCss += t4 + "bottom: 0;\r";
     containCss += t4 + "left: 0;\r";
     containCss += t4 + "right: 0;\r";
+    containCss += t4 + "transform: translate(0, -50%)\r";
     css += containCss;
   } else {
     var coverCss = '';
