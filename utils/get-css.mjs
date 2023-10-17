@@ -5,16 +5,22 @@
 import axios from 'axios';
 
 async function getMiCss() {
-  try {
-    const { data } = await axios.get('https://www.miamiherald.com');
-    const reg = /(\/wps\/build\/webpack\/css\/mi-styles.)[\w\d]+(.css)/g;
-    const found = data.match(reg);
-    const url = `https://www.miamiherald.com${found[0]}`;
+  
+  // UPDATE: this request is timing out (as of 10/17/23)
+  // try {
+  //   const { data } = await axios.get('https://www.miamiherald.com');
+  //   const reg = /(\/wps\/build\/webpack\/css\/mi-styles.)[\w\d]+(.css)/g;
+  //   const found = data.match(reg);
+  //   const url = `https://www.miamiherald.com${found[0]}`;
 
-    return url;
-  } catch (error) {
-      console.error(error);
-  }
+  //   return url;
+  // } catch (error) {
+  //     console.error(error);
+  // }
+
+  // UPDATE: using an alternate method to get latest saratoga.css
+  const url = "https://www.miamiherald.com/static/hi/saratoga/saratoga.css";
+  return url;
 }
 
 export { getMiCss };
