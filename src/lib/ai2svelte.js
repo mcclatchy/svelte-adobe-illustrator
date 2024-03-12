@@ -4002,8 +4002,8 @@ function generateArtboardCss(ab, textClasses, settings) {
     css += containCss;
   } else {
     var coverCss = '';
-    coverCss += t4 + "position: relative";
-    coverCss += t4 + "overflow: hidden";
+    coverCss += t4 + "position: relative;\r";
+    coverCss += t4 + "overflow: hidden;\r";
     css += coverCss;
   }
   css += t3 + '}\r';
