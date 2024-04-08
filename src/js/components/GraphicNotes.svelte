@@ -8,7 +8,7 @@
 
 <style type="text/css">
 	.g-notes {
-    font: 0.875rem var(--sans);
-    color: var(--gray) !important;
+    font: 400 .875rem / 1.4em var(--sans);
+    color: var(--caption-color, var(--secondary-text-color));
 	}
 </style>

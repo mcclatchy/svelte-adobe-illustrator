@@ -124,6 +124,57 @@ const createGraphic = async (graphic, i) => {
         </script>
 
         <style type='text/css'>
+            :root {
+                font: var(--font-base) / 1.5rem var(--serif);
+                --font-base: 18px;
+                --sans: "Noto Sans", Verdana, sans-serif;
+                --serif: "Noto Serif", Georgia, serif;
+                --premium-serif: "DM Serif Display", serif;
+                --h1: calc(var(--font-base)* 1.875);
+                --h2: calc(var(--font-base)* 1.5);
+                --h3: calc(var(--font-base)* 1.1);
+                --h4: var(--font-base);
+                --space: 20px;
+                --space-sm: calc(var(--space) / 2);
+                --space-lg: calc(var(--space)* 3);
+                --grid-row-gap: var(--space);
+                --grid-column-gap: var(--space);
+                --page-padding: var(--space);
+                --section-width: 1140px;
+                --story-width: 728px;
+                --menu-width: 390px;
+                --story-media-width: var(--story-width);
+                --story-embed-width: var(--story-width);
+                --columns: repeat(auto-fit, minmax(300px, 1fr));
+                --black: #241f21;
+                --gray: #f5f7fa;
+                --darkgray: #4f5864;
+                --white: #fff;
+                --light-brown: #f7efe0;
+                --dark-brown: #a4906e;
+                --light-orange: #fee4d0;
+                --dark-orange: #e49162;
+                --light-green: #ebf7da;
+                --dark-green: #9ea472;
+                --light-blue: #c3d8e4;
+                --dark-blue: #273f57;
+                --background-color: var(--gray);
+                --text-color: #1f2933;
+                --secondary-text-color: var(--darkgray);
+                --media-background-color: #e9ecf0;
+                --sub-blue: #0f1521;
+                --sub-text-color: var(--white);
+                --sub-secondary-text-color: var(--gray);
+                --link-color: #132dad;
+                --link-decoration: none;
+                --paper-color: var(--white);
+                --paper-shadow: none;
+                --gap: var(--space);
+                --spread: var(--space-sm);
+                --premium-bc: var(--sub-blue);
+                --premium-tc: var(--sub-text-color);
+                --premium-impact: var(--sub-secondary-text-color);
+            }
             :global(.g-text) {
             width: min(var(--story-width), 100%);
             --hf: var(--serif);
@@ -250,6 +301,57 @@ ${embedTemplate}
           width: min(var(--story-width), 100%);
           --hf: var(--serif);
           --ht: none;
+          }
+          :root {
+              font: var(--font-base) / 1.5rem var(--serif);
+              --font-base: 18px;
+              --sans: "Noto Sans", Verdana, sans-serif;
+              --serif: "Noto Serif", Georgia, serif;
+              --premium-serif: "DM Serif Display", serif;
+              --h1: calc(var(--font-base)* 1.875);
+              --h2: calc(var(--font-base)* 1.5);
+              --h3: calc(var(--font-base)* 1.1);
+              --h4: var(--font-base);
+              --space: 20px;
+              --space-sm: calc(var(--space) / 2);
+              --space-lg: calc(var(--space)* 3);
+              --grid-row-gap: var(--space);
+              --grid-column-gap: var(--space);
+              --page-padding: var(--space);
+              --section-width: 1140px;
+              --story-width: 728px;
+              --menu-width: 390px;
+              --story-media-width: var(--story-width);
+              --story-embed-width: var(--story-width);
+              --columns: repeat(auto-fit, minmax(300px, 1fr));
+              --black: #241f21;
+              --gray: #f5f7fa;
+              --darkgray: #4f5864;
+              --white: #fff;
+              --light-brown: #f7efe0;
+              --dark-brown: #a4906e;
+              --light-orange: #fee4d0;
+              --dark-orange: #e49162;
+              --light-green: #ebf7da;
+              --dark-green: #9ea472;
+              --light-blue: #c3d8e4;
+              --dark-blue: #273f57;
+              --background-color: var(--gray);
+              --text-color: #1f2933;
+              --secondary-text-color: var(--darkgray);
+              --media-background-color: #e9ecf0;
+              --sub-blue: #0f1521;
+              --sub-text-color: var(--white);
+              --sub-secondary-text-color: var(--gray);
+              --link-color: #132dad;
+              --link-decoration: none;
+              --paper-color: var(--white);
+              --paper-shadow: none;
+              --gap: var(--space);
+              --spread: var(--space-sm);
+              --premium-bc: var(--sub-blue);
+              --premium-tc: var(--sub-text-color);
+              --premium-impact: var(--sub-secondary-text-color);
           }
       </style>
 

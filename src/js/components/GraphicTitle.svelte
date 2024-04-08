@@ -8,7 +8,14 @@
 
 <style type="text/css">
 	.g-title {
-		font-size: var(--hs,1.5rem);
-  	margin: 0;
+		max-width: min(var(--story-width), calc(100vw - 2 * var(--space)));
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: none;
+    font-family: var(--g-title-font, var(--serif));
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 15px;
 	}
 </style>
