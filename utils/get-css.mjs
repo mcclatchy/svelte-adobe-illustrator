@@ -19,7 +19,7 @@ async function getMiCss() {
   // }
 
   // UPDATE: using an alternate method to get latest saratoga.css
-  const url = "https://www.miamiherald.com/static/hi/saratoga/saratoga.css";
+  const url = "https://www.miamiherald.com/static/hi/sds/2.5/dist/saratoga.css";
   return url;
 }
 

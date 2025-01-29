@@ -22,7 +22,6 @@
     "eslint": "^7.32.0",
     "fs-extra": "^10.1.0",
     "marked": "^4.0.8",
-    "node-sass": "^8.0.0",
     "postcss-nesting": "^10.0.2",
     "sass": "^1.57.1",
     "svelte": "^3.44.2",

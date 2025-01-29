@@ -176,9 +176,9 @@ const createGraphic = async (graphic, i) => {
                 --premium-impact: var(--sub-secondary-text-color);
             }
             :global(.g-text) {
-            width: min(var(--story-width), 100%);
-            --hf: var(--serif);
-            --ht: none;
+              width: min(var(--story-width), 100%);
+              --hf: var(--serif);
+              --ht: none;
             }
         </style>
 
@@ -298,9 +298,9 @@ ${embedTemplate}
 
       <style type='text/css'>
           :global(.g-text) {
-          width: min(var(--story-width), 100%);
-          --hf: var(--serif);
-          --ht: none;
+            width: min(var(--story-width), 100%);
+            --hf: var(--serif);
+            --ht: none;
           }
           :root {
               font: var(--font-base) / 1.5rem var(--serif);
